@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/apply_filter"
+        style="@style/Text16spRegularPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/app_item_padding"
+        android:text="@string/apply_filter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/close_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/app_item_padding"
+        android:src="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/textColorSecondary"
+        app:layout_constraintTop_toBottomOf="@id/apply_filter" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/selected_filter_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        android:padding="@dimen/app_item_padding"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/view"
+        tools:itemCount="5"
+        tools:listitem="@layout/selected_filter_item" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/textColorSecondary"
+        android:orientation="horizontal"
+        android:padding="@dimen/app_item_padding"
+        app:constraint_referenced_ids="account_count,brand_count,location_count"
+        app:flow_horizontalBias="0"
+        app:flow_horizontalGap="@dimen/app_item_margin"
+        app:flow_horizontalStyle="packed"
+        app:flow_maxElementsWrap="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selected_filter_recycler_view" />
+
+    <include
+        android:id="@+id/account_count"
+        layout="@layout/selected_filter_item" />
+
+    <include
+        android:id="@+id/brand_count"
+        layout="@layout/selected_filter_item" />
+
+    <include
+        android:id="@+id/location_count"
+        layout="@layout/selected_filter_item" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow_items"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:constraint_referenced_ids="select_account_number,select_brand,select_location"
+        app:flow_maxElementsWrap="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/flow" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/select_account_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:paddingVertical="@dimen/app_vertical_padding"
+        android:paddingStart="@dimen/app_item_padding"
+        android:paddingEnd="@dimen/app_vertical_padding"
+        app:layout_constraintTop_toBottomOf="@id/flow">
+
+        <TextView
+            style="@style/Text14spMediumPrimary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/app_item_padding"
+            android:text="@string/selection_account_number"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/acc_item_count"
+            style="@style/Text14spMediumPrimary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/acc_icon"
+            app:layout_constraintTop_toTopOf="@id/acc_icon"
+            tools:text="3" />
+
+        <ImageView
+            android:id="@+id/acc_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_chevron"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/view_2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/textColorSecondary"
+        app:layout_constraintTop_toBottomOf="@id/select_account_number" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/select_brand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:paddingVertical="@dimen/app_vertical_padding"
+        android:paddingStart="@dimen/app_item_padding"
+        android:paddingEnd="@dimen/app_vertical_padding"
+        app:layout_constraintTop_toBottomOf="@id/flow">
+
+        <TextView
+            style="@style/Text14spMediumPrimary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/app_item_padding"
+            android:text="@string/select_brand"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/brand_item_count"
+            style="@style/Text14spMediumPrimary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/brand_icon"
+            app:layout_constraintTop_toTopOf="@id/brand_icon"
+            tools:text="9" />
+
+        <ImageView
+            android:id="@+id/brand_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_chevron"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/view_3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/textColorSecondary"
+        app:layout_constraintTop_toBottomOf="@id/select_brand" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/select_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:paddingVertical="@dimen/app_vertical_padding"
+        android:paddingStart="@dimen/app_item_padding"
+        android:paddingEnd="@dimen/app_vertical_padding"
+        app:layout_constraintTop_toBottomOf="@id/flow">
+
+        <TextView
+            style="@style/Text14spMediumPrimary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/app_item_padding"
+            android:text="@string/select_location"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/location_item_count"
+            style="@style/Text14spMediumPrimary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/location_icon"
+            app:layout_constraintTop_toTopOf="@id/location_icon"
+            tools:text="5" />
+
+        <ImageView
+            android:id="@+id/location_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_chevron"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/apply_filter_btn"
+        style="@style/AppicMaterialButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/apply_filter"
+        app:layout_constraintTop_toBottomOf="@id/flow_items" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

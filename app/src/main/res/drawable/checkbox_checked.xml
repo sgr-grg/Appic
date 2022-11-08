@@ -1,0 +1,18 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="@color/checkbox_color"
+        android:fillType="nonZero"
+        android:pathData="M20,20l0,-16l-16,0l0,16z"
+        android:strokeWidth="1"
+        android:strokeColor="#00000000" />
+    <path
+        android:fillColor="@android:color/white"
+        android:fillType="nonZero"
+        android:pathData="M10,16.7109l-3.3516,-3.3594l0.7031,-0.7031l2.6484,2.6406l6.6484,-6.6406l0.7031,0.7031z"
+        android:strokeWidth="1"
+        android:strokeColor="#00000000" />
+</vector>

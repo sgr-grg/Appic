@@ -1,0 +1,110 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Appic" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rounded_dialog</item>
+    </style>
+
+
+    <style name="AppicMaterialButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:textSize">16sp</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:radius">8dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="iconTint">@color/white</item>
+        <item name="android:backgroundTint">@color/colorAccent</item>
+        <item name="android:paddingTop">@dimen/app_item_padding</item>
+        <item name="android:paddingBottom">@dimen/app_item_padding</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="MaterialButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:textSize">16sp</item>
+        <item name="cornerRadius">0dp</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:radius">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="iconTint">@color/white</item>
+        <item name="android:backgroundTint">@color/colorAccent</item>
+        <item name="android:paddingTop">@dimen/app_item_padding</item>
+        <item name="android:paddingBottom">@dimen/app_item_padding</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text10spRegular" parent="android:Widget.TextView">
+        <item name="android:textSize">10sp</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+
+    <style name="Text14spRegular" parent="android:Widget.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+
+    <style name="Text14spRegularPrimary" parent="Text14spRegularSecondary">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+
+    <style name="Text14spRegularSecondary" parent="android:Widget.TextView">
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+
+    <style name="Text14spMediumPrimary" parent="android:Widget.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="Text16spRegular" parent="android:Widget.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="Text16spRegularPrimary" parent="Text16spRegular">
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+
+    <style name="Text16spRegularSecondary" parent="Text16spRegular">
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+
+    <style name="Text16spMediumPrimary" parent="android:Widget.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+</resources>

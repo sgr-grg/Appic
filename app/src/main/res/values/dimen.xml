@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="app_vertical_padding">8dp</dimen>
+    <dimen name="app_item_padding">16dp</dimen>
+    <dimen name="app_item_margin">4dp</dimen>
+</resources>
